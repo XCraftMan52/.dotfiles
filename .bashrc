@@ -63,4 +63,5 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fialias dot='/usr/bin/git --git-dir=/home/xcraftman52/.dotfiles/ --work-tree=/home/xcraftman52'
+fi
+alias dot='/usr/bin/git --git-dir=/home/xcraftman52/.dotfiles/ --work-tree=/home/xcraftman52'
