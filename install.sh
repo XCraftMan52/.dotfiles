@@ -7,8 +7,10 @@ curl -L https://nixos.org/nix/install | sh
 # install packages
 nix-env -iA \
 	nixpkgs.zsh \
+	nixpkgs.starship \
 	nixpkgs.antibody \
 	nixpkgs.git \
+	nixpkgs.tmux \
 	nixpkgs.stow \
 	nixpkgs.yarn \
 	nixpkgs.fzf \
@@ -19,9 +21,9 @@ nix-env -iA \
 	nixpkgs.direnv
 
 # stow dotfiles
+stow neofetch
 stow starship
 stow zsh
-stow neofetch
 
 # add zsh as a login shell
 command -v zsh | sudo tee -a /etc/shells
