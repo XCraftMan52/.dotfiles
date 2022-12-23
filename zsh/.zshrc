@@ -50,6 +50,7 @@ alias ls="exa --icons --group-directories-first"
 alias ll="exa --icons --group-directories-first -l"
 alias g="goto"
 alias grep='grep --color'
+alias dot='/usr/bin/git --git-dir=/home/xcraftman52/.dotfiles/ --work-tree=/home/xcraftman52'
 
 alias cbp="code /home/xcad/obsidianvault/boilerplates"
 alias cpr="code /home/xcad/obsidianvault/projects"
@@ -95,3 +96,11 @@ export STARSHIP_DISTRO="$ICON"
 
 # Load Starship
 eval "$(starship init zsh)"
+source /home/xcraftman52/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# pnpm
+export PNPM_HOME="/home/xcraftman52/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+# nix
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
